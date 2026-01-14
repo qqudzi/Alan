@@ -1,0 +1,32 @@
+
+.tree {
+     list-style-type: none;
+     padding-left: 20px;
+      }
+
+ .tree li {
+      position: relative;
+      padding: 5px 0 ;
+      list-style-type: none;
+          }     
+ .tree li::before {
+     content: "";
+     position: absolute;
+     left: -10px;
+     top: 10px;
+     border-left: 1px solid white; 
+     height: 100%;
+                  } 
+.tree li::after {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 15px;
+      border-top: 1px solid white ;
+      width: 10px;
+                } 
+
+ .tree li:last-child::before {
+     height: 5px;
+                             }
+

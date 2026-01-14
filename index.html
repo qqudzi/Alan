@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Солнечная система</title>
+    <link rel="stylesheet" href="css/solar.css">
+    <link rel="stylesheet" href="css/button.css">
+</head>
+<body>
+    <div class="solar-system">
+          <div class="sun"></div>
+
+          <div class="orbit mercury-orbit">
+                <div class="planet mercury" data-name="Меркурий"></div>
+          </div>
+
+          <div class="orbit venus-orbit">
+                <div class="planet venus" data-name="Венера"></div>
+          </div>
+          <div class="orbit earth-orbit">
+                <div class="planet earth" data-name="Земля"></div>
+          </div>
+          <div class="orbit mars-orbit">
+                <div class="planet mars" data-name="Марс"></div>
+          </div>
+           <div class="orbit jupiter-orbit">
+                <div class="planet jupiter" data-name="Юпитер"></div>
+          </div>
+          <div class="orbit saturn-orbit">
+                <div class="planet saturn" data-name="Сатурн"></div>
+          </div>
+          <div class="orbit uranus-orbit">
+                <div class="planet uranus" data-name="Уран"></div>
+          </div>
+          <div class="orbit neptune-orbit">
+                <div class="planet neptune" data-name="Нептун"></div>
+          </div>
+    </div>
+-
+    <div class="info-panel" id="info-panel">
+          <h3 id="planet-name"> </h3>
+          <p id="planet-info"></p>
+          <button class="close-button"  type="button" onclick="document.body.querySelector('#info-panel').style.display='none';"> закрыть </button>
+    </div>
+
+     <div class="controls">
+         <button type="button" id="speed-up" class="glow-on-hover">Ускорить</button>
+         <button type="button" id="speed-down" class="glow-on-hover">Замедлить</button>
+         <button type="button" id="show-hide" onclick="hideShow();" class="glow-on-hover">Орбиты</button>
+     </div>
+
+      <div class="status-line">
+            Разработано в CODDY. © 2025-2026
+      </div>
+
+
+    <script defer src="/js/scripts.js">
+    
+    </script>
+    <script>
+
+    </script>
+</body>
+</html>

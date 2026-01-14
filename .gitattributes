@@ -1,0 +1,7 @@
+*.html linguist-language=HTML
+*.java linguist-detectable=false
+*.python linguist-detectable=false 
+*.js linguist-detectable=false
+*.html linguist-detectable=true
+*.xml linguist-detectable=false 
+*.css linguist-detectable=false 
