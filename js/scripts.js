@@ -1,3 +1,6 @@
+const root = document.documentElement;
+
+
 const descripions= { 
     "Меркурий" : "Меркурий Ближайший к Солнцу и самый быстрый мир, названный в честь крылатого посланника богов. Год здесь длится всего 88 земных дней. Это царство контрастов: днём — палящий ад (+430°C), ночью — ледяной ад (-180°C). У него крупное железное ядро и кратеристая, безвоздушная поверхность, похожая на лунную. " ,
     "Венера" :  "Венера раскалённый близнец Земли, окутанный ядовитыми облаками из серной кислоты, создающими мощнейший парниковый эффект.",
@@ -92,6 +95,10 @@ function updateSpeedMinus() {
     orbits.forEach(orbit => {
         const duratiton = parseFloat(getComputedStyle(orbit).animationDuration);
         orbit.style.animationDuration = `${duratiton / currentSpeed}s`;
+        if (orbit.classList.contains ("saturn-orbit")){
+            root.style.setProperty('--saturn-animation',
+                getComputedStyle(orbit).animationDuration);
+                                                      }
                             });
                             }
 
@@ -100,8 +107,12 @@ function updateSpeedPlus() {
     orbits.forEach(orbit => {
         const duratiton = parseFloat(getComputedStyle(orbit).animationDuration);
         orbit.style.animationDuration = `${duratiton * currentSpeed}s`;
+        if (orbit.classList.contains ("saturn-orbit")){
+            root.style.setProperty('--saturn-animation',
+                getComputedStyle(orbit).animationDuration);
+                                                      }
                             });
-                          }
+                            }
 
 
 function increaseSpeed() {

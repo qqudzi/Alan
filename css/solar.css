@@ -6,6 +6,7 @@
 
 :root {
      --main-color: yellow; 
+     --saturn-animation: 36s;
       }
 
 
@@ -51,12 +52,17 @@
      position: absolute;
      border-radius: 50%;
      outline: 1px solid rgb(230, 223, 223);
-     animation: rotate linear infinite;
+     animation: rotate-orbit linear infinite;
      pointer-events: none;
        }
-@keyframes rotate {
+@keyframes rotate-orbit {
       from { transform: rotate(0deg);}
       to { transform: rotate(360deg);}
+                  }
+ 
+@keyframes saturn-rings {
+      from { transform: rotate(0deg);}
+      to { transform: rotate(-360deg);}
                   }
 
 
@@ -83,8 +89,8 @@
               }
 
 .mercury {
-     width: 12px;
-     height: 12px;
+     width: 13px;
+     height: 13px;
      background: radial-gradient(at -5px -5px, #E79784, #922D02);
          }
 
@@ -96,8 +102,8 @@
               }
 
 .venus-orbit {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
     outline-offset: -9px;
     animation-duration: 12s;
               }
@@ -110,8 +116,8 @@
       }
 
 .earth-orbit {
-     width: 260px;
-     height: 260px;
+     width: 300px;
+     height: 300px;
      outline-offset: -10px;
      animation-duration: 16s;
             }
@@ -124,8 +130,8 @@
       }
 
 .mars-orbit {
-     width: 320px;
-     height: 320px;
+     width: 370px;
+     height: 370px;
      outline-offset: -8px;
      animation-duration: 20s;
             }
@@ -138,8 +144,8 @@
       }
 
 .jupiter-orbit {
-     width: 420px;
-     height: 420px;
+     width: 510px;
+     height: 510px;
      outline-offset: -22px;
      animation-duration: 28s;
                 }     
@@ -152,10 +158,10 @@
             }        
 
   .saturn-orbit {
-     width: 520px;
-     height: 520px;
+     width: 630px;
+     height: 630px;
      outline-offset: -20px;
-     animation-duration: 36s;
+     animation-duration: var(--saturn-animation);
                 }     
 
  .saturn {
@@ -173,14 +179,15 @@
      border: 7px solid #b28922;
      opacity: 0.4;
      border-radius: 50%;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
+     top: 10%;
+     left: -45%;
+     animation: saturn-rings linear infinite;
+     animation-duration: var(--saturn-animation);
                 }           
 
 .uranus-orbit {
-     width: 620px;
-     height: 620px;
+     width: 750px;
+     height: 750px;
      outline-offset: -20px;
      animation-duration: 44s;
                 }     
@@ -192,8 +199,8 @@
         } 
         
 .neptune-orbit {
-     width: 720px;
-     height: 720px;
+     width: 870px;
+     height: 870px;
      outline-offset: -13px;
      animation-duration: 52s;
                 } 
@@ -233,7 +240,7 @@
                }           
 
 .close-button:hover {
-     background-color: var(--main-color);
+     background-color: var(--main-color );
                     }               
 
 
