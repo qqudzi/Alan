@@ -16,6 +16,9 @@
      background: #000000;
      overflow: hidden;
      font-family: Arial, Helvetica, sans-serif;
+     font-size: medium;
+     width: 100dvw;
+     height: 100dvh;
      }
      
 .solar-system {
@@ -76,15 +79,14 @@
 
 .planet {
      position: absolute;
-     transform: scale(1.3);
      border-radius: 50%;
-      top: 0;
+     top: 0;
      left: 50%;
      z-index: 1000;
      pointer-events: auto;
         }
 
-.planet:hover{ 
+.planet:hover { 
      transform: scale(1.3);
               }
 
@@ -267,6 +269,7 @@ button    {
 
 button:hover{
      box-shadow: 5px 5px 15px gray, -5px -5px 15px gray;
+
             }   
             
  button:active{
@@ -275,11 +278,39 @@ button:hover{
               
           
 .status-line {
-     position: fixed;
-     left: 5vw;
-     bottom: 5vh;
+     position: absolute;
+     left: 5%;
+     bottom: 5%;
      color: white;
      border: 1px currentColor solid ;
      padding: 2vw;
      border-radius: 5px;
              }            
+
+
+
+@media (max-width : 1063px) {
+     .status-line {padding: 1vw;}
+                            }
+
+@media (max-height : 500px ) {
+      body {
+          font-size: smaller;
+           }
+                             }       
+    /*                        
+@media (orientation: landscape) {
+     /* 
+    body {
+     height: 100dvh;
+     width: 10dvh;
+         }   
+  
+   
+ .solar-system {
+      height: 100dvh;
+      width: 10dvh;
+         }   
+                                 }
+          */ 
+                               

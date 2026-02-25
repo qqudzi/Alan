@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
     <title>Солнечная система</title>
     <link rel="stylesheet" href="css/solar.css">
     <link rel="stylesheet" href="css/button.css">
@@ -36,6 +36,10 @@
           <div class="orbit neptune-orbit">
                 <div class="planet neptune" data-name="Нептун"></div>
           </div>
+
+          <div class="status-line">
+            Разработано в CODDY. © 2025-2026
+          </div>
     </div>
 -
     <div class="info-panel" id="info-panel">
@@ -45,14 +49,12 @@
     </div>
 
      <div class="controls">
-         <button type="button" id="speed-up" class="glow-on-hover">Ускорить</button>
+         <button type="button" id="speed-up" class="glow-on-hover" >Ускорить</button>
          <button type="button" id="speed-down" class="glow-on-hover">Замедлить</button>
          <button type="button" id="show-hide" onclick="hideShow();" class="glow-on-hover">Орбиты</button>
      </div>
 
-      <div class="status-line">
-            Разработано в CODDY. © 2025-2026
-      </div>
+      
 
 
     <script defer src="js/scripts.js">
