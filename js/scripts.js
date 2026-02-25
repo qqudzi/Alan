@@ -50,6 +50,23 @@ function createStars() {
                         }
    
    
+
+
+function setSunListener() {
+     const sun = document.body.querySelector('.sun');
+     sun.addEventListener('click',  
+                              () => {
+                                console.log("sun", sun);
+                                 const panel = document.body.querySelector('#info-panel');
+                                 const title = panel.querySelector('#planet-name');
+                                 const desc = panel.querySelector('#planet-info');
+                                 title.innerHTML = "это солнце";
+                                 desc.innerHTML = "Самая ближайшая к нам звезда - желтый карлик";
+                                 panel.style.display = "block";
+                                   })
+                              }
+
+
    function setListener() { // let xxx = 
      const planets = document.body.querySelectorAll('.planet');
      // console.log(planets);
@@ -142,6 +159,7 @@ function decreaseSpeed() {
 
 
  createStars();      
- setListener();             
+ setListener();  
+ setSunListener();           
 
 
