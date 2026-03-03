@@ -60,8 +60,8 @@ function setSunListener() {
                                  const panel = document.body.querySelector('#info-panel');
                                  const title = panel.querySelector('#planet-name');
                                  const desc = panel.querySelector('#planet-info');
-                                 title.innerHTML = "это солнце";
-                                 desc.innerHTML = "Самая ближайшая к нам звезда - желтый карлик";
+                                 title.innerHTML = "Это солнце (желтый карлик)";
+                                 desc.innerHTML = "Хотя это звезда, а не планета, без него ничего бы не существовало. Раскалённый плазменный шар, сердце нашей системы, источник света, тепла и жизни. Его мощная гравитация удерживает все миры на своих орбитах.";
                                  panel.style.display = "block";
                                    })
                               }
