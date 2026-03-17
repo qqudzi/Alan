@@ -112,48 +112,47 @@ function updateSpeedMinus() {
     orbits.forEach(orbit => {
         const duratiton = parseFloat(getComputedStyle(orbit).animationDuration);
         orbit.style.animationDuration = `${duratiton / currentSpeed}s`;
-        if (orbit.classList.contains ("saturn-orbit")){
+        if (orbit.classList.contains("saturn-orbit")){
             root.style.setProperty('--saturn-animation',
                 getComputedStyle(orbit).animationDuration);
-                                                      }
-                            });
-                            }
+        }
+    });
+}
 
 function updateSpeedPlus() {
     const orbits = document.body.querySelectorAll(".orbit");
     orbits.forEach(orbit => {
         const duratiton = parseFloat(getComputedStyle(orbit).animationDuration);
         orbit.style.animationDuration = `${duratiton * currentSpeed}s`;
-        if (orbit.classList.contains ("saturn-orbit")){
+        if (orbit.classList.contains("saturn-orbit")){
             root.style.setProperty('--saturn-animation',
                 getComputedStyle(orbit).animationDuration);
-                                                      }
-                            });
-                            }
+        }
+    });
+}
 
 
 function increaseSpeed() {
-      if (currentSpeed < 1.5) {
-          currentSpeed = currentSpeed * 1.1;
-          console.log("currentSpeed", currentSpeed);
-      if (currentSpeed < 1.0)    {  updateSpeedPlus();   }
-      else                       {  updateSpeedMinus();  }
-                              }
-                         }
-
+    if (currentSpeed < 1.5) {
+        currentSpeed = currentSpeed * 1.1;
+        if (currentSpeed < 1.0) {
+            updateSpeedPlus();
+        } else {
+            updateSpeedMinus();
+        }
+    }
+}
 
 function decreaseSpeed() {
-      if (currentSpeed < 1.5) {
-          currentSpeed = currentSpeed / 1.2;
-          console.log("currentSpeed", currentSpeed);
-      if (currentSpeed < 1.0)    {  updateSpeedMinus();  }
-      else                       {  updateSpeedPlus() ;  }
-                              }
-                         }
-
-
-
-
+    if (currentSpeed > 0.3) {  
+        currentSpeed = currentSpeed / 1.2;
+        if (currentSpeed < 1.0) {
+            updateSpeedMinus();
+        } else {
+            updateSpeedPlus();
+        }
+    }
+}
 
 
 

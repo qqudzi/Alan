@@ -5,25 +5,57 @@
    font-family: Arial, Helvetica, sans-serif;
   }
 
+  :root{
+      --background-color:blue;
+      --main-color: aliceblue; 
+      --main-padding: 10vw;
+
+       }
+
 
  header {
-    height: 10vh;
-    background-color: blue;
-    color: aliceblue;
-    padding: 10vh;
+    background-color: var(--background-color);
+    color:var(--main-color);
+    padding: 5vh var(--main-padding);
 }  
 
  h1 {
     text-align: center;
+    padding: 2vh auto;
+    word-wrap: break-word;
 }
+
+main{
+  padding: 10vh var(--main-padding);
+    }
 
  footer {
     height: 10vh;
-    background-color: blue;
+    background-color: var(--background-color);
     color: aliceblue;
-    padding: 10vh;
-
-
+    padding: 10vh var(--main-padding);
  }
+
+.gallery-image{
+   width: 100%;
+}   
+
+.gallery-item {
+    width: 40vw;
+    padding: 3vw;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,);
+ }
+
+ .gallery {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+   gap: 5vw;
+ }
+
+h3 {
+   padding: 20px;
+   }
+
 
 
